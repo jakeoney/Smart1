@@ -8,8 +8,8 @@ import java.util.ArrayList;
  * You should fill the getSuccessors(...) method of this class.
  * 
  */
-public class State {
-
+public class State 
+{
 	private Square square;
 	private State parent;
 
@@ -29,7 +29,8 @@ public class State {
 	 * @param gValue
 	 *            total distance from start
 	 */
-	public State(Square square, State parent, int gValue, int depth) {
+	public State(Square square, State parent, int gValue, int depth)
+	{
 		this.square = square;
 		this.parent = parent;
 		this.gValue = gValue;
@@ -43,20 +44,14 @@ public class State {
 	 *            initial maze to get find the neighbors
 	 * @return all the successors of the current state
 	 */
-	public ArrayList<State> getSuccessors(boolean[][] closed, Maze maze) {
-		// FILL THIS METHOD
+	public ArrayList<State> getSuccessors(boolean[][] closed, Maze maze) 
+	{
 		Square leftSquare, downSquare, rightSquare, upSquare;
 		State left, down, right, up;
 		ArrayList<State> successors = new ArrayList<State>();
 		
-		
 		//this node is getting expanded so set it to false in closed list
 		closed[this.getSquare().X][this.getSquare().Y] = true;
-		
-		// TODO check all four neighbors (up, right, down, left)
-		// TODO return all unvisited neighbors
-		// TODO remember that each successor's depth and gValue are
-		// +1 of this object.
 		
 		//Defining the squares and states
 		upSquare = new Square(this.getX() - 1, this.getY());

@@ -29,14 +29,13 @@ public class DepthFirstSearcher extends Searcher {
 	 * @return true if the search finds a solution, false otherwise.
 	 */
 	public boolean search() {
-		// FILL THIS METHOD
 		int depth; 
 		int gVal;
 		ArrayList<State> successors;
 		depth = 0;
-		gVal = 0;	//will need to do for astar
+		gVal = 0;		//will need to do for astar
 		State currPosition;
-		//number of nodes expanded
+		
 		/*startSquare is our player's starting location*/
 		Square startSquare = 
 				new Square(maze.getPlayerSquare().X, maze.getPlayerSquare().Y);
